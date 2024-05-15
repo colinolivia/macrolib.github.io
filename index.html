@@ -8,70 +8,234 @@
 	
 	<style>
 	body {
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
 		background-color: rgba(0, 0, 0, 0.8);
 	}
-	.head {
-		margin-left: 120px;
-		margin-right: 120px;
+	#head {
 		font-family: Calibri;
 		font-size: 16px;
 		color: white;
 	}
 	.down {
-		margin-left: 120px;
-		margin-right: 120px;
+		width: 100%;
+		height: 540px;
+		background-image: radial-gradient(closest-side ellipse, rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
 		display: flex;
 	}
-	.down50 {
-		width: 50%;
-		height: 100px;
-		border: 0px solid black;
-		box-sizing: border-box;
-		font-family: Calibri;
-		font-size: 12px;
-		color: rgba(255, 255, 255, 0.9);
+	#ph {
+		width: 10%;
+		height: 100%;
 	}
-	.down33 {
+	#cappic {
+		width: 60%;
+		height: 100%;
+		background-image: url("images/cap2.png");
+		background-repeat: no-repeat;
+		background-size: 600px 900px;
+		transition: all 0.5s;
+	}
+	#capdes {
+		width: 30%;
+		height: 100%;
+		font-size: 12px;
+		color: rgba(255,255,255,0.8);		
+	}
+	#scppic {
+		width: 0%;
+		height: 100%;
+		background-image: url("images/cap.png");
+		background-repeat: no-repeat;
+		background-size: 600px 500px;
+		transition: all 0.5s;
+	}
+	#scpdes {
+		width: 0%;
+		height: 100%;
+		font-size: 0px;
+		color: rgba(255,255,255,0.8);		
+	}
+	#spppic {
+		width: 0%;
+		height: 100%;
+		background-image: url("images/cap.png");
+		background-repeat: no-repeat;
+		background-size: 600px 500px;
+		transition: all 0.5s;
+	}
+	#sppdes{
+		width: 0%;
+		height: 100%;
+		font-size: 0px;
+		color: rgba(255,255,255,0.8);		
+	}
+	.downbar {
+		display: flex;
+	}
+	.downbar33 {
 		width: 33.33%;
-		height: 100px;
+		height: 60px;
 		border: 0px solid black;
 		box-sizing: border-box;
 		font-family: Calibri;
 		font-size: 12px;
-		color: rgba(255, 255, 255, 0.9);
+		color: rgba(255,255,255,0.8);
+		text-align: center;
+		transition: all 0.25s;
 	}
+	.downbar33:hover {
+		font-size: 13px;
+		color: rgba(255,255,255,1);
+		border-top: 2px solid gray;
+	}
+	#capbar {
+		border-top: 2px solid gray;
+	}
+	#scpbar {
+		border-top: 0px solid gray;
+	}
+	#sppbar {
+		border-top: 0px solid gray;
+	}
+
 	</style>
 	
 	<body>
-		<div class="head">
+		<div id="head">
 			<h1>Welcome to the MACROLIB Research Group!</h1>
+			<h3>Feel free to enjoy the collective wisedom of our group members.</h3>
 		</div>
 
 		<div class="down">
-			<div class="down50">
+			<div id="ph">
+			</div>
+			<div id="cappic">
+			</div>
+			<div id="scppic">
+			</div>
+			<div id="spppic">
+			</div>
+			<div id="capdes">
+				<h3>Clinical Automation Package, currently, provides data manipulation and visualization based on patient profile.
+				</h3>
+				<h3>More features, such as Medical Writing, Medical Monitoring Method are under development. 
+					Please refer to SDP for detailed information.
+				</h3>
+				<h3><a href="https://www.macrolib.com">Download ZIP File</a></h3>
+				<h3>Compatiable with WIN10 and higher
+			</div>
+			<div id="scpdes">
+				<h3>Statistical Computation Package, currently, provides designer and simulator for dose escalation design,
+					including Rule-based, Model-assisted, and Model-based Method with aulxiliary function.
+				</h3>
+				<h3>More features, such as Group Sequential, Sample Size Re-estimation Method are under development. 
+					Please refer to SDP for detailed information.
+				</h3>
+				<h3><a href="https://www.macrolib.com">Download ZIP File</a></h3>
+				<h3>Compatiable with WIN10 and higher
+				</h3>
+			</div>
+			<div id="sppdes">
+				<h3>There is a description of SPP</h3>
+			</div>
+		</div>
+
+		<div class="downbar">
+			<div class="downbar33" id="capbar" onclick="capfun()">
 				<h1>Clinical Automation Package (CAP)</h1>
 			</div>
-			<div class="down50">
+			<div class="downbar33" id="scpbar" onclick="scpfun()">
 				<h1>Statistical Computation Package (SCP)</h1>
-			</div>			
+			</div>	
+			<div class="downbar33" id="sppbar" onclick="sppfun()">
+				<h1>Study Projection Package (SPP)</h1>
+			</div>				
 		</div>
 		
-		<div class="down">
-			<div class="down33">
-				<h1>Data Validation Tool (DVT)</h1>
-			</div>
-			<div class="down33">
-				<h1>Data Management Tool (DMT)</h1>
-			</div>
-			<div class="down33">
-				<h1>FTE Projection Tool (FTE)</h1>
-			</div>
+		<div id="head">
+			<h3>For any issue, please contact Charles L. at charlesliu@macrolib.com.</h3>
+		</div>
+	
+	<script>
+		function capfun(){
+			var capdiv = document.getElementById("cappic");
+			capdiv.style.width="60%";
+			var capdiv = document.getElementById("capdes");
+			capdiv.style.width="30%";	
+			capdiv.style.fontSize="12px";	
+			var capbar = document.getElementById("capbar");
+			capbar.style.borderTop="2px solid gray";
 			
-		</div>
-
-		<div class="head">
-			<h1>Acknowledge to Our Authors and Contributors!</h1>
-		</div>
+			var scpdiv = document.getElementById("scppic");
+			scpdiv.style.width="00%";
+			var scpdiv = document.getElementById("scpdes");
+			scpdiv.style.width="00%";			
+			scpdiv.style.fontSize="0px";	
+			var scpbar = document.getElementById("scpbar");
+			scpbar.style.borderTop="0px solid gray";
+			
+			var sppdiv = document.getElementById("spppic");
+			sppdiv.style.width="00%";
+			var sppdiv = document.getElementById("sppdes");
+			sppdiv.style.width="00%";		
+			sppdiv.style.fontSize="0px";				
+			var sppbar = document.getElementById("sppbar");
+			sppbar.style.borderTop="0px solid gray";
+		}
 		
+		function scpfun(){
+			var capdiv = document.getElementById("cappic");
+			capdiv.style.width="00%";
+			var capdiv = document.getElementById("capdes");
+			capdiv.style.width="00%";	
+			capdiv.style.fontSize="0px";	
+			var capbar = document.getElementById("capbar");
+			capbar.style.borderTop="0px solid gray";
+			
+			var scpdiv = document.getElementById("scppic");
+			scpdiv.style.width="60%";
+			var scpdiv = document.getElementById("scpdes");
+			scpdiv.style.width="30%";			
+			scpdiv.style.fontSize="12px";	
+			var scpbar = document.getElementById("scpbar");
+			scpbar.style.borderTop="2px solid gray";
+			
+			var sppdiv = document.getElementById("spppic");
+			sppdiv.style.width="00%";
+			var sppdiv = document.getElementById("sppdes");
+			sppdiv.style.width="00%";		
+			sppdiv.style.fontSize="0px";				
+			var sppbar = document.getElementById("sppbar");
+			sppbar.style.borderTop="0px solid gray";
+		}
+		
+		function sppfun(){
+			var capdiv = document.getElementById("cappic");
+			capdiv.style.width="00%";
+			var capdiv = document.getElementById("capdes");
+			capdiv.style.width="00%";	
+			capdiv.style.fontSize="0px";	
+			var capbar = document.getElementById("capbar");
+			capbar.style.borderTop="0px solid gray";
+			
+			var scpdiv = document.getElementById("scppic");
+			scpdiv.style.width="00%";
+			var scpdiv = document.getElementById("scpdes");
+			scpdiv.style.width="00%";			
+			scpdiv.style.fontSize="0px";	
+			var scpbar = document.getElementById("scpbar");
+			scpbar.style.borderTop="0px solid gray";
+			
+			var sppdiv = document.getElementById("spppic");
+			sppdiv.style.width="60%";
+			var sppdiv = document.getElementById("sppdes");
+			sppdiv.style.width="30%";		
+			sppdiv.style.fontSize="12px";				
+			var sppbar = document.getElementById("sppbar");
+			sppbar.style.borderTop="2px solid gray";
+		}
+	</script>
 	</body>
+	
 </html>
