@@ -8,7 +8,7 @@
 	
 	<style>
 	body {
-		background-color: rgba(0,0,0,0.80);
+		background-color: rgba(0,0,0,0.75);
 	}
 	#container {
 		max-width: 900px;
@@ -22,13 +22,12 @@
 	#cap {
 		max-width: 100%; 
 		margin-top: 40px;
-		font-family: Arial;
-		font-size: 16px;
-		color: rgba(255,255,255,0.95);
-		display: flex;
 	}
 	.btndownload {
-		height:40px; 
+		width: 40%;
+		height: 40px; 
+		margin-left: auto;
+		margin-right: auto;
 		border-radius:10px;
 		background-color:rgba(0,0,200,0.25); 
 		display:flex; 
@@ -50,35 +49,32 @@
 				<h1>Welcome to MACROLIB!</h1>
 				<h3>
 					MACROLIB frees you from the burden of complex computation, allowing you to focus on what truly matters. 
-					Whether you are a novice in data science or a seasoned pro, our <a href="community.html" style="color:white;">community</a> makes outcome more accessible and manageable for you.
+					Whether you are a novice in data science or a seasoned pro, 
+					our <a href="community" style="color:white;">community</a> makes outcome more accessible and manageable for you.
 				</h3>
 			</div>
 			<!--CAP-->
 			<div id="cap">
-				<img style="max-width:60%; height:auto;" src="images/cap.png" alt="CAP_SCREENSHOT">
-				<div style="max-width:40%; margin-left:10px;">
-					<h3>Clinical Automation Package (CAP)</h3>
-					<h5>CAP, currently, provides data manipulation and visualization per patient profile.</h5>
-					<h5>More features, such as Medical Monitoring, Medical Writing are under development. Please refer to SDP for detailed information.</h5>
+				<div style="font-family:Arial; font-size:16px; color:rgba(255,255,255,0.95);">
+					<h2 style="text-align:center;">Clinical Automation Package (CAP)</h2>
+					<p style="text-align:center;">
+						CAP provides integrated data manipulation and visualization for patient profile.
+						More features, such as Medical Monitoring Report, Medical Writing are under development. 
+						Please refer to <a href="dev/cap/sdp" style="color:white;"> Software Development Plan</a> for detailed information.
+					</p>
 					<div class="btndownload">
-						<h3>Download for Windows (64bit)</h3>
+						<h3>Download for Windows</h3>
 					</div>
+					<p style="text-align:center;font-size:12px;">
+						By downloading, you agree to the <a href="dev/cap/license" style="color:white;">Term</a>.
+					</p>
 				</div>
+				<img style="max-width:100%; height:auto;margin-top:40px;" src="images/cap.png" alt="CAP_SCREENSHOT">
 			</div>
 			<!--SCP-->
-			<div id="cap">
-				<img style="max-width:60%; height:auto;" src="images/cap.png" alt="CAP_SCREENSHOT">
-				<div style="max-width:40%; margin-left:10px;">
-					<h3>Statistical Computation Package (SCP)</h3>
-					<h5>SCP, currently, provides designer and simulator for dose escalation design, including Rule-based, Model-assisted, and Model-based Method with aulxiliary function.</h5>
-					<h5>More features, such as Group Sequential, Sample Size Re-estimation Method are under development. Please refer to SDP for detailed information.</h5>
-					<div class="btndownload">
-						<h3>Download for Windows (64bit)</h3>
-					</div>
-				</div>
-			</div>
+
 			<!--FOOTER-->
-			<div id="head" style="display:flex; justify-content:center; align-items:center; ">
+			<div id="head" style="display:flex; justify-content:center; align-items:center;">
 				<h5>2024 MACROLIB Group. All rights reserved.
 				</h5>
 			</div>
