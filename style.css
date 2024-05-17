@@ -1,0 +1,35 @@
+/* 通用 */
+body {
+	/* 背景灰色 */
+	background-color: rgba(0,0,0,0.65);
+	/* 背景图片； 位置； 尺寸30%视觉宽度； 固定位置*/
+	background-image: url("https://www.macrolib.com/images/back.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: 30vw auto;
+	background-attachment: fixed;
+}
+hr {
+	border: none;
+	height: 2px;
+	background-image: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.05));
+}
+/* 主要容器限制；最大宽度900px； 上下0； 左右居中*/
+#container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+/* 标题；字体 */
+#head {
+	font-family: Arial;
+	font-size: 16px;
+	color: rgba(255,255,255,0.95);
+}
+/* 标题；字体 */
+#foot {
+	margin-top:60px;
+	text-align: center;
+	font-family: Arial;
+	font-size: 16px;
+	color: rgba(255,255,255,0.95);
+}

@@ -2,58 +2,61 @@
 <html>
 	<head>
 		<title>MACROLIB HOME</title>
+		<!-- <link rel="stylesheet" href="https://www.macrolib.com/style.css"> -->
+		<link rel="stylesheet" href="style.css">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
 	
 	<style>
-	body {
-		background-color: rgba(0,0,0,0.75);
-		background-image: url("https://www.macrolib.com/images/back.png");
-		background-repeat: no-repeat;
-		background-size: 400px 400px;
-		background-position: right top;
-	}
-	#container {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-	#head {
-		font-family: Arial;
-		font-size: 16px;
-		color: rgba(255,255,255,0.95);
-		background-image: url("https://www.macrolib.com/images/header.png");
-		background-repeat: no-repeat;
-		background-size: 200px 100px;
-		background-position: right center;
-	}
-	#cap {
+	.pak {
 		max-width: 100%; 
 		margin-top: 60px;
 		background-image: radial-gradient(closest-side ellipse, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0));
+		font-family:Arial; 
+		font-size:16px; 
+		color:rgba(255,255,255,0.95);
 	}
-	#capfea {
+	.fea {
 		width: 100%;
 		height: 0;
 		opacity: 0;
 		overflow: hidden;
         transition: all 1s ease;
+
 	}
-	#scp {
-		max-width: 100%; 
-		margin-top: 60px;
-		background-image: radial-gradient(closest-side ellipse, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0));
+	.feaL1 {
+		width:100%; 
+		height:auto; 
+		margin-top:20px;
+		display:flex; 
+		justify-content: center;
+		align-items: center;
 	}
-	#scpfea {
-		width: 100%;
-		height: 0;
-		opacity: 0;
-		overflow: hidden;
-        transition: all 1s ease;
-	}	
+	.feaL133 {
+		width: 25%;
+		height: 95%;
+		height: auto; 
+		margin-left: auto;
+		margin-right: auto;
+		background-color: rgba(255,255,255,0.75);
+		box-shadow: inset 0 0 10px rgba(255,255,255,0.95);
+	}
+	/* pak title */
+	.til {
+		text-align:center; 
+		text-shadow:3px 3px 5px rgba(255,255,255,0.75);
+	}
+	/* pak des */
+	.des {
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	/* buttom */
 	.btnL1 {
 		width: 100%;
-		height: 40px; 
+		height: 50px; 
 		display: flex;
 	}
 	.btnL2 {
@@ -67,7 +70,7 @@
 		align-items:center; 
 		background-image: url("https://www.macrolib.com/images/btn.png");
 		background-repeat: no-repeat;
-		background-size: 320px 160px;
+		background-size: 200px 100px;
 		background-position: right center;
 		cursor: pointer;
 		transition: all 0.25s;
@@ -86,18 +89,19 @@
 				<h1>Welcome to MACROLIB!</h1>
 				<h3>
 					MACROLIB frees you from the burden of complex computation, allowing you to focus on what truly matters. 
-					Whether you are a novice in data science or a seasoned pro, 
-					our <a href="https://www.macrolib.com/community" style="color:white;">community</a> makes outcome more accessible and manageable for you.
+					Whether you are a novice in data science or a seasoned pro, our 
+					<a href="https://www.macrolib.com/community" style="color:rgba(255,255,255,0.95);">community</a> 
+					makes outcome more accessible and manageable for you.
 				</h3>
+				<hr>
 			</div>
-			<hr style="border-color:rgba(255,255,255,0.95);">
 
 			<!--SCP-->
-			<div id="scp">
-				<div style="font-family:Arial; font-size:16px; color:rgba(255,255,255,0.95);">
+			<div class="pak" id="scp">
+				<div>
 					<!--Description-->
-					<h2 style="text-align:center;">Statistical Computation Package (SCP)</h2>
-					<p style="text-align:center;">
+					<h2 class="til">Statistical Computation Package (SCP)</h2>
+					<p class="des">
 						Statistical Computation Package, currently, provides designer and simulator for dose escalation design, including Rule-based, Model-assisted, and Model-based Method with aulxiliary function.
 						More features, such as Group Sequential, Sample Size Re-estimation Method are under development. 
 						Please refer to <a href="dev/scp/sdp" style="color:white;"> Software Development Plan</a> for detailed information.
@@ -112,35 +116,25 @@
 						</div>
 					</div>
 					<!--License-->
-					<p style="text-align:center;font-size:12px;">
+					<p class="des" style="font-size:12px;">
 						By downloading, you agree to the <a href="https://www.macrolib.com/dev/cap/license" style="color:white;">Term</a>.
 					</p>
 				</div>
 				
 				<!--Features-->
-				<div id="scpfea">
-					<img style="max-width:100%; height:auto; margin-top:40px;" src="https://www.macrolib.com/images/cap.png" alt="CAP_SCREENSHOT">
+				<div class="fea" id="scpfea">
 					<!--Feature1-->
-					<div style="width:100%; height:auto; display:flex; margin-top:20px">
-						<div style="width:30%; display:flex; justify-content:center; align-items:center;">
+					<div class="feaL1">
+						<div class="feaL133">
+							<img style="max-width:30%; height:auto;" src="images/scpmet.png" alt="SCP_SCREENSHOT">
+						</div>
+						<div class="feaL133">
 							<img style="max-width:50%; height:auto;" src="https://www.macrolib.com/images/scp1.png" alt="SCP_SCREENSHOT">
 						</div>
-						<div style="width:70%;">
-							<p style="width:80%; margin:auto; text-align:center; font-family:Arial; font-size:16px; color:rgba(255,255,255,0.95);">
-								The dose escalation study can be time-consuming since patients are commonly monitored till the onset of toxicity or pre-specified window. Incorporating in-time data for decision making is crucial.
-							</p>
+						<div class="feaL133">
+							<img style="max-width:80%; height:auto;" src="https://www.macrolib.com/images/scp1.png" alt="SCP_SCREENSHOT">
 						</div>
-					</div>
-					<!--Feature2-->
-					<div style="width:100%; height:auto; display:flex; margin-top:20px">
-						<div style="width:70%;">
-							<p style="width:80%; margin:auto; text-align:center; font-family:Arial; font-size:16px; color:rgba(255,255,255,0.95);">
-								The dose escalation study can be time-consuming since patients are commonly monitored till the onset of toxicity or pre-specified window. Incorporating in-time data for decision making is crucial.
-							</p>
-						</div>
-						<div style="width:30%; display:flex; justify-content:center; align-items:center;">
-							<img style="max-width:50%; height:auto;" src="https://www.macrolib.com/images/scp1.png" alt="SCP_SCREENSHOT">
-						</div>
+
 					</div>
 				</div>
 				
@@ -148,11 +142,11 @@
 			<!--SCP-->
 			
 			<!--CAP-->
-			<div id="cap">
-				<div style="font-family:Arial; font-size:16px; color:rgba(255,255,255,0.95);">
+			<div class="pak" id="cap">
+				<div>
 					<!--Description-->
-					<h2 style="text-align:center;">Clinical Automation Package (CAP)</h2>
-					<p style="text-align:center;">
+					<h2 class="til">Clinical Automation Package (CAP)</h2>
+					<p class="des">
 						CAP provides integrated data manipulation and visualization for patient profile.
 						More features, such as Medical Monitoring Report, Medical Writing are under development. 
 						Please refer to <a href="dev/cap/sdp" style="color:white;"> Software Development Plan</a> for detailed information.
@@ -167,13 +161,13 @@
 						</div>
 					</div>
 					<!--License-->
-					<p style="text-align:center;font-size:12px;">
+					<p class="des" style="font-size:12px;">
 						By downloading, you agree to the <a href="https://www.macrolib.com/dev/cap/license" style="color:white;">Term</a>.
 					</p>
 				</div>
 				
 				<!--Features-->
-				<div id="capfea">
+				<div class="fea" id="capfea">
 					<img style="max-width:100%; height:auto; margin-top:40px;" src="https://www.macrolib.com/images/cap.png" alt="CAP_SCREENSHOT">
 					<!--Feature1-->
 					<div style="width:100%; height:auto; display:flex; margin-top:20px">
@@ -202,8 +196,9 @@
 			</div>
 
 			<!--FOOTER-->
-			<div id="head" style="display:flex; justify-content:center; align-items:center; margin-top:60px">
-				<h5>2024 MACROLIB Group. All rights reserved.
+			<div id="foot">
+				<hr>
+				<h5 style="">2024 MACROLIB Group. All rights reserved.
 				</h5>
 			</div>
 		</div>
