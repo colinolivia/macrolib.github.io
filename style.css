@@ -60,8 +60,8 @@ body {
 	align-items:center; 
 	background-image: url("https://www.macrolib.com/images/btn.png");
 	background-repeat: no-repeat;
-	background-size: 75% auto;
-	background-position: right center;
+	background-size: 20% auto;
+	background-position: right bottom;
 	cursor: pointer;
 	transition: all 0.25s;
 }

@@ -13,6 +13,6 @@ function autoExecute() {
 	var body = document.getElementsByTagName("body")[0];
 	document.body.style.backgroundImage = path;
 	document.body.style.backgroundPosition = "right center";
-	document.body.style.backgroundSize = "auto 25vh";
+	document.body.style.backgroundSize = "auto 35vh";
 }
 window.onload = autoExecute;
