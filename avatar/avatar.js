@@ -4,13 +4,25 @@ function generateRandomNumber(N) {
 
 function padNumber(num, length) {
 	return String(num).padStart(length, '0');
-}		
+}
+var rnum = generateRandomNumber(1);
+var rstr = padNumber(rnum, 3);		
+var pathA = "https://www.macrolib.com/avatar/A"+rstr+".png"
+var pathB = "https://www.macrolib.com/avatar/B"+rstr+".png";
 
 function autoExecute() {
-	var rnum = generateRandomNumber(2);
-	var rstr = padNumber(rnum, 3);
-	var path = "https://www.macrolib.com/avatar/"+rstr+".png"
 	var body = document.getElementById("aimg");
-	body.src = path;
+	body.src = pathA;
 }
 window.onload = autoExecute;
+
+var box = document.getElementById("aimg");
+box.addEventListener("click", function() {
+    if(this.src===pathA){
+		this.src = pathB;
+		this.style.height = "40vh";
+	}else{
+		this.src = pathA;
+		this.style.height = "10vh";
+	};
+});

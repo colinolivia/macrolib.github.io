@@ -76,13 +76,10 @@ body {
     right: 0; /* 固定在右侧 */
     transform: translateY(-50%); /* 垂直居中的微调 */
     z-index: 1000; /* 确保在其他内容上方 */
+	cursor: pointer;
 }
 #aimg {
 	width: auto; 
-	height: 20vh;
-	transition: all 1s ease;
-}
-#aimg:hover {
-	height: 40vh;
-    cursor: pointer;
+	height: 10vh;
+	transition: all 0.5s ease;
 }
