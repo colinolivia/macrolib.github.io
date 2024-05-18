@@ -77,8 +77,10 @@ body {
     width: auto; /* 宽度 */
     height: 35hv; /* 高度 */
     transform: translateY(-50%); /* 垂直居中的微调 */
+	transition: all 0.5s ease;
     z-index: 1000; /* 确保在其他内容上方 */
 }
 #aimg: hover {
-	height: 35vh;
+	transform: scale(4);
+    cursor: pointer;
 }
