@@ -9,7 +9,7 @@ function padNumber(num, length) {
 function autoExecute() {
 	var rnum = generateRandomNumber(2);
 	var rstr = padNumber(rnum, 3);
-	var path = "url('avatar/"+rstr+".png')"
+	var path = "https://www.macrolib.com/avatar/"+rstr+".png"
 	var body = document.getElementById("aimg");
 	body.src = path;
 }
