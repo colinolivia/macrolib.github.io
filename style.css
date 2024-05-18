@@ -69,3 +69,13 @@ body {
 	background-size: 100% auto;
 	font-size: 20px;
 }
+
+.floating {
+    position: fixed;
+    top: 50%; /* 垂直居中 */
+    left: 0; /* 固定在右侧 */
+    width: auto; /* 宽度 */
+    height: 25hv; /* 高度 */
+    transform: translateY(-50%); /* 垂直居中的微调 */
+    z-index: 1000; /* 确保在其他内容上方 */
+}
