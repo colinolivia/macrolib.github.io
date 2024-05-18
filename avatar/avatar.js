@@ -10,9 +10,7 @@ function autoExecute() {
 	var rnum = generateRandomNumber(2);
 	var rstr = padNumber(rnum, 3);
 	var path = "url('avatar/"+rstr+".png')"
-	var body = document.getElementsByTagName("body")[0];
-	document.body.style.backgroundImage = path;
-	document.body.style.backgroundPosition = "right center";
-	document.body.style.backgroundSize = "auto 35vh";
+	var body = document.getElementById("aimg");
+	body.src = path;
 }
 window.onload = autoExecute;
