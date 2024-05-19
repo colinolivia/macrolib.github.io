@@ -20,7 +20,7 @@ var box = document.getElementById("aimg");
 box.addEventListener("click", function() {
     if(this.src===pathA){
 		this.src = pathB;
-		this.style.height = "40vh";
+		this.style.height = "50vh";
 	}else{
 		this.style.height = "10vh";
 		this.src = pathA;
