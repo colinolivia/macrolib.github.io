@@ -5,6 +5,7 @@ function generateRandomNumber(N) {
 function padNumber(num, length) {
 	return String(num).padStart(length, '0');
 }
+
 var rnum = generateRandomNumber(1);
 var rstr = padNumber(rnum, 3);		
 var pathA = "https://www.macrolib.com/avatar/A"+rstr+".png"
@@ -26,3 +27,14 @@ box.addEventListener("click", function() {
 		this.src = pathA;
 	};
 });
+
+var L1 = document.createElement('link');
+L1.rel = 'preload';
+L1.href = pathA
+L1.as = 'image';
+document.head.appendChild(L1);
+var L2 = document.createElement('link');
+L2.rel = 'preload';
+L2.href = pathB
+L2.as = 'image';
+document.head.appendChild(L2);
