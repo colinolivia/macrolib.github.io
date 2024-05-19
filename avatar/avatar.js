@@ -22,7 +22,7 @@ box.addEventListener("click", function() {
 		this.src = pathB;
 		this.style.height = "40vh";
 	}else{
-		this.src = pathA;
 		this.style.height = "10vh";
+		this.src = pathA;
 	};
 });
