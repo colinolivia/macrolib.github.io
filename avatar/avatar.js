@@ -6,7 +6,7 @@ function padNumber(num, length) {
 	return String(num).padStart(length, '0');
 }
 
-var rnum = generateRandomNumber(1);
+var rnum = generateRandomNumber(2);
 var rstr = padNumber(rnum, 3);		
 var pathA = "https://www.macrolib.com/avatar/A"+rstr+".png"
 var pathB = "https://www.macrolib.com/avatar/B"+rstr+".png";
